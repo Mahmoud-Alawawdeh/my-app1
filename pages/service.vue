@@ -109,9 +109,7 @@ import Cheekboox from '../components/cheekboox.vue';
 
  // options  <<<<<
 export default {
-    // mounted () {
-    //     Memory().ttttttttttt = 'dddddddddddddd'  
-    // },
+ 
     data () {
         return {
             Cards: [

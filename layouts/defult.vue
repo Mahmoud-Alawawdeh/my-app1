@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Footerap from '~/components/footerap.vue';
+
 
 
 
