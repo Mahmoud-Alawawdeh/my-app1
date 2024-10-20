@@ -3,7 +3,6 @@
             <title>Home</title>
 
     </head>
-    <div class="home">
+    <div class="home" style="height: 100vh;"></div>
 
-    </div>
 </template>

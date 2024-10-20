@@ -67,13 +67,28 @@
                     <span class="pserv" style="margin-left: 18px;">To</span>
                     <input type="date" style="margin-left: 18px;">
                 </div>
-                <Cheekboox/>
-                
+
+
             </div>
         </div><!-- All-service-->
 
-        <card v-for="card in Cards" :key="id" :Title="card.Title" :Price="card.Price" :desc="card.desc"  :Category="card.Category"  />
-       
+        <!-- service 2 -->
+        <div class="All-service marg">
+
+            <div class="drop" style="display: flex; gap: 120px; margin-top: 50px;">
+                <dv class="com">
+                    <Cheekboox />
+                </dv>
+                <div class="com">
+                    <Radio />
+                </div>
+            </div>
+        </div>
+        <div class="All-service marg"></div>
+        <!-- sevice 2 -->
+        <card v-for="card in Cards" :key="id" :Title="card.Title" :Price="card.Price" :desc="card.desc"
+            :Category="card.Category" />
+
 
         <div class="product marg">
 
@@ -105,7 +120,7 @@
 </template>
 
 <script>
-import Cheekboox from '../components/cheekboox.vue';
+
 
  // options  <<<<<
 export default {
@@ -129,7 +144,7 @@ export default {
                 ,
                 {id:3,
                     Title: 'SURGICAL MISSIONS',
-                    Category: 'Personal Service 2',
+                    Category: 'Personal Service 3',
                     desc: 'br3 In addition  to physical health, mental well-being plays a crucial role in maintaining a balanced life.Engaging in activities that   promote relaxation, such as meditation or yoga, In addition to physical health, mental well- beingplays a crucial role in maintaining a balanced life.Engaging in activities that awawdeh',
                     Price: '140',
                     
