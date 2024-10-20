@@ -17,7 +17,7 @@
     <h3>choies your job: {{ jobs.join(' - ') }}</h3>
   </div>
 
- 
+
 </template>
 
 <script>
@@ -64,18 +64,18 @@ input[type="checkbox"]:checked {
   border-color: rgb(147, 180, 27);
 }
 
-  input[type="checkbox"]:checked::before {
-    content: '';
-    display: block;
-    width: 5px;
-    height: 11px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(31deg);
-    position: absolute;
-    top: 2px;
-    left: 5px;
-  }
+input[type="checkbox"]:checked::before {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(31deg);
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
 
 label {
   margin-left: 10px;
@@ -85,7 +85,7 @@ label {
   transition: color 0.2s ease;
 }
 
-input[type="checkbox"]:checked + label {
+input[type="checkbox"]:checked+label {
   color: rgb(147, 180, 27);
   font-weight: bold;
 }
