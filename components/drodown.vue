@@ -55,7 +55,7 @@
 }
 
 .dropdown[multiple] {
-  height: auto; /* Allow it to grow based on content */
+  height: auto; 
 }
 
 .dropdown:hover {
