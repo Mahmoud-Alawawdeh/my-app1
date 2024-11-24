@@ -6,7 +6,6 @@
     </select>
   </div>
 </template>
-
 <script>
 export default {
   props: {
@@ -15,9 +14,8 @@ export default {
   }
 };
 </script>
-
-
 <style scoped>
+
 .selectdrop {
   width: 253.65px;
   height: 53.61px;
@@ -26,7 +24,7 @@ export default {
   border: none;
   font-family: system-ui;
   font-size: 19px;
-  font-weight: bold;
+  font-weight: 700;
 
 
 }
@@ -61,8 +59,7 @@ export default {
 }
 
 .dropdown[multiple] {
-  height: auto;
-  /* Allow it to grow based on content */
+  height: auto; /* Allow it to grow based on content */
 }
 
 .dropdown:hover {
