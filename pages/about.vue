@@ -1,13 +1,18 @@
 <template>
-<head>
-            <title>about</title>
 
-    
-
-
+    <head>
+        <title>about</title>
     </head>
 
-<div class="about" style="height: 100vh;"></div>
+ 
 
 
 </template>
+
+<script>
+
+
+const dataFetch = await $fetch('https://jsonplaceholder.typicode.com/photos')
+console.log(dataFetch)
+
+</script>

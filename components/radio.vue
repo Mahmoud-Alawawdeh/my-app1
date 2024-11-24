@@ -10,7 +10,7 @@
             <label for="two">Two</label>
         </div>
 
-        <h3>Your choice: {{ choies }}</h3>
+        
     </div>
 </template>
 
@@ -28,11 +28,10 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     width: 300px;
-    box-shadow: 6.28px 6.28px 28.7px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 4.82px 4.82px 22.04px 0px rgba(0, 0, 0, 0.2);
 }
 
 .radio-item {

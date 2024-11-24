@@ -1,30 +1,36 @@
 <template>
-    <div class="dropdown-container">
-        <select v-model="selectedJobs" name="cars" id="cars" style="width: 253.65px;height: 53.61px;top: 627.3px;left: 110.78px;
-                    box-shadow: 4.82px 4.82px 22.04px 0px rgba(0, 0, 0, 0.2); padding: 13px 45px 11px 17px;
-                    border: none; font-family: system-ui; font-size: 19px; font-weight: bold;">
-                        <option value="" selected disabled hidden>Personal service</option>
-                        <option value="volvo">midcal</option>
-                        <option value="saab">herat</option>
-                        <option value="mercedes">eng</option>
-                        <option value="audi">softwawre</option>
-                    </select>
-      <h3>Your selected jobs: {{ selectedJobs }}</h3>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        selectedJobs: []  
-      };
-    }
-  };
-  </script>
+  <div class="dropdown-container">
+    <select v-model="store1()[Res]" class="selectdrop">
+      <option selected disabled hidden>choies Your job</option>
+      <option v-for="option in Options" :key="option">{{ option }}</option>
+    </select>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    Options: { default: [], type: Array },
+    Res: { default: '', type: String }
+  }
+};
+</script>
 
 
 <style scoped>
+.selectdrop {
+  width: 253.65px;
+  height: 53.61px;
+  box-shadow: 4.82px 4.82px 22.04px 0px rgba(0, 0, 0, 0.2);
+  padding: 13px 45px 11px 17px;
+  border: none;
+  font-family: system-ui;
+  font-size: 19px;
+  font-weight: bold;
+
+
+}
+
 .dropdown-container {
   display: flex;
   flex-direction: column;
@@ -47,7 +53,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: border 0.3s ease, color 0.3s ease, background-color 0.3s ease;
- 
+
 
   background-position: right 10px top 50%;
   background-size: 12px;
@@ -55,7 +61,8 @@
 }
 
 .dropdown[multiple] {
-  height: auto; /* Allow it to grow based on content */
+  height: auto;
+  /* Allow it to grow based on content */
 }
 
 .dropdown:hover {
@@ -77,5 +84,4 @@ h3 {
   color: #555;
   margin-top: 20px;
 }
-
 </style>

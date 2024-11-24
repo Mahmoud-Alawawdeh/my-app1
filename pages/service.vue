@@ -1,14 +1,8 @@
 <template>
-
-    <head>
-        <title>service</title>
-
-    </head>
     <div class="container">
-
         <div class="our_service">
             <h1>our service </h1>
-            <p style="font-size: 30px;">Maintaining a healthy lifestyle is essential for overall well-being and
+            <p class="f18 f30">Maintaining a healthy lifestyle is essential for overall well-being and
                 longevity. It involves a balanced
                 diet rich in fruits,wimming, or strength training, helps keep the body fit, improves cardiovascular
                 health,
@@ -16,8 +10,7 @@
 
             </p>
             <br>
-
-            <p style="font-size: 30px;">
+            <p class="f18 f30">
                 swimming, or strength training, helps keep the body fit, improves cardiovascular health,
                 and boosts mental clarity. Proper hydration, sufficient sleep, and managing stress are also critical
                 aspects
@@ -30,75 +23,60 @@
             </p>
         </div>
         <!-- our service -->
-
-
         <div class="All-service marg">
             <h1>All service</h1>
-            <div class="service" style="display: flex; gap: 120px;">
+            <div class="service">
 
-
-                <div class="selcet-wraper ">
-
-                    <p class="pserv">type</p>
-                    <select name="cars" id="cars" style="width: 253.65px;height: 53.61px;top: 627.3px;left: 110.78px;
-                    box-shadow: 4.82px 4.82px 22.04px 0px rgba(0, 0, 0, 0.2); padding: 13px 45px 11px 17px;
-                    border: none; font-family: system-ui; font-size: 19px; font-weight: bold;">
-                        <option value="" selected disabled hidden>Personal service</option>
-                        <option value="volvo">midcal</option>
-                        <option value="saab">herat</option>
-                        <option value="mercedes">eng</option>
-                        <option value="audi">softwawre</option>
-                    </select>
-                </div> <!-- selcet-wraper -->
+                <div class="com" style="padding: 20px;">
+                    <dropdown_2 Res="selectcategory" :Options="Categorydropdown" />
+                </div>
 
                 <div class="RanSalr">
                     <p class="pserv">type</p>
-                    <input type="text"> -
-                    <input type="text">
-
-
+                    <input v-model="mincost" type="text" placeholder="min"> -
+                    <input v-model="maxcost" type="text" placeholder="max">
 
                 </div> <!-- RanSalr -->
+
                 <div class="date">
                     <p class="pserv">Dates</p>
                     <span class="pserv">From</span>
                     <input type="date" style="margin-left: 18px;">
-
                     <span class="pserv" style="margin-left: 18px;">To</span>
                     <input type="date" style="margin-left: 18px;">
                 </div>
 
-
             </div>
         </div><!-- All-service-->
-
         <!-- service 2 -->
         <div class="All-service marg">
 
-            <div class="drop" style="display: flex; gap: 120px; margin-top: 50px;">
+            <div class="service">
+
                 <dv class="com">
-                    <Cheekboox />
+                    <cheek_boox />
                 </dv>
+
                 <div class="com">
                     <Radio />
-                </div >
+                </div>
 
                 <div class="com">
-                    <Drodown />
-
+                    <dropdown_2 Res="selectcost" :Options="dropdownsalary" />
+                    
                 </div>
             </div>
         </div>
-        <div class="All-service marg"></div>
+        <div class="All-service marg" />
         <!-- sevice 2 -->
-        <card v-for="card in Cards" :key="id" :Title="card.Title" :Price="card.Price" :desc="card.desc"
-            :Category="card.Category" />
-
-
+        <ProductCard
+v-for="card in filteredcard" :key="card" :Id="card.productId" :title="card.productName"
+            :price="card.cost" :desc="card.description" :category="card.category" :imgurl="card.imgurl" />
         <div class="product marg">
 
             <div class="detailes-product2">
-                <span style="display: block; font-size: 42px; font-weight: 700; padding: 5px; ;
+                <span
+style="display: block; font-size: 42px; font-weight: 700; padding: 5px; ;
                 line-height: 63px; font-family: system-ui;color: #525252;"> SURGICAL MISSIONS</span>
 
                 <p>In addition to physical health, mental well-being plays a crucial role in maintaining
@@ -108,62 +86,126 @@
                     grains, and lean proteins, which provide the necessary nutrients for energy and bodily functions.
                     Regular physical activity, whether through exercises like walking.
                 </p>
-
-
             </div>
 
             <div class="">
-
-                <img class="img-product" src="public/mg2.png" alt="no photo" style="border-radius:10px ;">
-
+                <NuxtImg class="img-product" format="webp" src="/mg2.png"  alt="no photo"/>
+              
             </div>
         </div><!-- product-->
-
-
     </div>
-
 </template>
 
-<script>
-
-
- // options  <<<<<
+<script >
+// options  <<<<<
 export default {
- 
-    data () {
+    data() {
         return {
             Cards: [
-                {   id:1,
+                {
+                    id: 1,
                     Title: 'SURGICAL MISSIONS',
                     Category: 'Personal Service 1',
                     desc: 'In addition to physical health, mental well-being plays a crucial role in maintaining a balanced life.Engaging in activities that   promote relaxation, such as meditation or yoga, In addition to physical health, mental well- beingplays a crucial role in maintaining a balanced life.Engaging in activities that',
                     Price: '200',
+                    imgurl: 'mg1.png'
                 },
-                {id:2,
+                {
+                    id: 2,
                     Title: 'SURGICAL MISSIONS',
                     Category: 'Personal Service 2',
                     desc: 'In addition to physical health, mental well-being plays a crucial role in maintaining a balanced life.Engaging in activities that   promote relaxation, such as meditation or yoga, In addition to physical health, mental well- beingplays a crucial role in maintaining a balanced life.Engaging in activities that awawdeh',
                     Price: '150',
-                    
+                    imgurl: 'mg2.png'
                 }
                 ,
-                {id:3,
+                {
+                    id: 3,
                     Title: 'SURGICAL MISSIONS',
                     Category: 'Personal Service 3',
                     desc: 'br3 In addition  to physical health, mental well-being plays a crucial role in maintaining a balanced life.Engaging in activities that   promote relaxation, such as meditation or yoga, In addition to physical health, mental well- beingplays a crucial role in maintaining a balanced life.Engaging in activities that awawdeh',
                     Price: '140',
-                    
+                    imgurl: 'mg1.png'
                 }
-            ]
+            ],
+            products: [],
+            Categorydropdown: [],
+            dropdownsalary: [],
+            mincost: [],
+            maxcost: [],
         }
-    }
+    },
+    computed: {
+        filteredcard() {
+            const category = store2().selectcategory;
+            const costs = store2().selectcosts;
+            
+            if (!category && !costs && !this.mincost && !this.maxcost) {
+                return this.products
+            }
+
+            if (!category && costs) {
+                return this.products.filter(card => card.cost === cost);
+            }
+
+            if (category && !costs) {
+                return this.products.filter(card => card.category === category);
+            }
+
+            if (category && costs) {
+                return this.products.filter(card => card.category === category && card.cost === cost);
+            }
+
+            if (this.mincost) {
+
+                return this.products.filter(card => card.cost >= this.mincost)
+            }
+
+            if (this.maxcost) {
+                return this.products.filter(card => card.cost <= this.maxcost)
+            }
+
+            if (this.mincost && this.maxcost) {
+
+                return this.products.filter(card => (card.cost >= this.mincost && card.cost <= this.maxcost))
+            }
+
+            
+            return this.products.filter(card => card.category === category && card.cost <= this.maxcost && card.cost === costs
+                && card.cost >= this.mincost
+            )
+        },
+
+    },
+    async mounted() {
+        try {
+            store2().cardprouduct = await $fetch('https://fakestoreapi.com/products/');
+            console.log('Fetched products:', store2().cardprouduct);
+            this.products = store2().cardprouduct.map((item) => ({
+                productId: item.id,
+                productName: item.title,
+                cost: item.price,
+                description: item.description,
+                imageUrl: item.image,
+                category: item.category
+            }));;
+        } catch (error) {
+            console.error('Error fetching products:', error);
+
+        }
+
+        this.Categorydropdown = [...new Set(this.products.map((e) => e.category))];
+        this.dropdownsalary = [...new Set(this.products.map((e) => e.cost))];
+
+    },
 }
 </script>
-
 
 <style>
 .img-product {
     background-image: url("public/mg1.png");
+    height: 100%;
+    border-radius: 0 10px 10px 8px
 }
 
 .container {
@@ -184,7 +226,6 @@ export default {
     text-align: center;
 }
 
-
 .pserv {
     margin: 0;
     font-size: 15px;
@@ -192,17 +233,18 @@ export default {
     font-weight: 300;
 }
 
-
-
-
 .All-service {
     border-top: 1px solid #dedede;
     padding: 10px;
     margin-top: 25px;
 }
 
+.service {
+    display: flex;
+    gap: 120px;
+    margin-top: 50px;
 
-
+}
 
 .RanSalr input {
     width: 148.4px;
@@ -223,13 +265,33 @@ export default {
     background: #e5e5e5;
     border: none;
     border-radius: 10px;
-    font-size: 19px;
+    font-size: 18px;
     outline: none;
     padding: 5px;
 }
 
+.f30 {
+    font-size: 30px;
+}
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1024px) {
+    .f18 {
+        font-size: 18px;
+
+    }
+
+    .container {
+        width: 80%
+    }
+
+    span {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
     .product {
 
         display: flex;
@@ -256,5 +318,12 @@ export default {
     .detailes-product2 {
         padding: 0;
     }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
 }
 </style>

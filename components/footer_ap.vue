@@ -1,10 +1,8 @@
 <template>
-    <footer>
-
         <div class="footer">
 
             <div class="footer_sec1">
-                <p style="color: #828282;padding:  100px 85px; "><strong style="color: #5a5a5a;">Healthy :</strong>
+                <p class="pfooter" ><strong style="color: #5a5a5a;">Healthy :</strong>
                     Maintaining good health is
                     essential for leading a balanced and fulfilling life.
                     A healthy lifestyle encompasses a nutritious diet, regular physical activity, sufficient sleep, and
@@ -19,8 +17,7 @@
                     fruits,
                     vegetables, whole grains, and lean proteins provides .
                 </p>
-                <span
-                    style="margin-top: 10px; display: block;margin-top: -50px; display: block;  font-size: 24px;  padding-left: 84px;padding-bottom: 40px; ">
+                <span class="footerp1" >
                     Healthy - Copyright © 2022 - All rights reserved
                 </span>
 
@@ -35,7 +32,7 @@
                 <div>
                     <a href="tel:+91123-456-7890">
                         +962781160363
-                    </a> <br />
+                    </a> <br >
                     <a href="mailto:feedback@geeksforgeeks.org">
                         info.3awd@gmail.com
                     </a>
@@ -48,9 +45,7 @@
             </div><!-- sec2-->
 
         </div>
-    </footer>
-
-
+    
 </template>
 
 
@@ -62,7 +57,6 @@
     margin-top: 50px;
     background-color: #f2f2f2;
     display: flex;
-
 }
 
 .footer_sec1 {
@@ -80,8 +74,20 @@
     padding: 25px;
     text-decoration: none;
 }
-
-@media only screen and (max-width: 900px) {
+.footerp1 {
+    margin-top: 10px;
+    display: block;
+    margin-top: -50px;
+    display: block;
+    font-size: 24px;
+    padding-left: 84px;
+    padding-bottom: 40px;
+}
+.pfooter {
+    color: #828282;
+    padding: 100px 85px;
+}
+@media only screen and (max-width: 1024px) {
 
 
 
@@ -93,6 +99,14 @@
     .footer_sec2 a {
         display: inline-block
     }
-
+    .footerp1 {
+        margin-top: 50px;
+    }
+    .pfooter{
+        padding: 15px;
+        margin-left: 70px;
+        width: 100%;
+   
+    }
 }
 </style>

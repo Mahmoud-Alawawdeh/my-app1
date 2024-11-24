@@ -1,10 +1,5 @@
 <template>
-  <div class="app">
-
-    <Navbar></Navbar>
-    <NuxtPage></NuxtPage>
-    <Footerap></footerap>
-  
-
-  </div>
+    <nav_bar/>
+    <NuxtPage/>
+    <Footer_ap/>
 </template>

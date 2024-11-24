@@ -1,20 +1,19 @@
 <template>
   <div class="contain">
     <div class="cheek">
-      <input type="checkbox" id="1" value="doctor" v-model="jobs" />
+      <input id="1" v-model="jobs" type="checkbox" value="doctor" >
       <label for="1">doctor</label>
     </div>
 
     <div class="cheek">
-      <input type="checkbox" id="2" value="software eng" v-model="jobs" />
+      <input id="2" v-model="jobs" type="checkbox" value="software eng" >
       <label for="2">software eng</label>
     </div>
 
     <div class="cheek">
-      <input type="checkbox" id="3" value="teachers" v-model="jobs" />
+      <input id="3" v-model="jobs" type="checkbox" value="teachers" >
       <label for="3">teachers</label>
     </div>
-    <h3>choies your job: {{ jobs.join(' - ') }}</h3>
   </div>
 
 
@@ -34,11 +33,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   width: 300px;
-  box-shadow: 6.28px 6.28px 28.7px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 4.82px 4.82px 22.04px 0px rgba(0, 0, 0, 0.2);
 }
 
 .cheek {
@@ -94,9 +92,5 @@ input[type="checkbox"]:checked+label {
   border-color: rgb(147, 180, 27);
 }
 
-h3 {
-  font-size: 18px;
-  color: #555;
-  margin-top: 20px;
-}
+
 </style>
