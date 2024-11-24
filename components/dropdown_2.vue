@@ -1,6 +1,6 @@
 <template>
     <div class="dropdown-container" @click="toggleDropdown">
-      <div class="selected">{{  store2()[Res] ?  store2()[Res]  : ' 💚Choose your choies ' }}</div>
+      <div class="selected">{{  store2()[Res] ?  store2()[Res]  : '💚Choose your choies ' }}</div>
       <div v-if="store2()[`${Res}_isOpen`]" class="dropdown-list">
         <div v-for=" option in Options" :key="option" class="dropdown-item" @click="selectJob(option)">
           
